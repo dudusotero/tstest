@@ -60,6 +60,20 @@ function App() {
     );
   }
 
+  function ControlDeck() {
+    function onClick() {
+      console.log("Toggled");
+    }
+
+    return (
+      <div className="controldeck-wrapper">
+        <button type="button" onClick={onClick}>
+          Toggle Layout
+        </button>
+      </div>
+    );
+  }
+
   React.useEffect(() => {
     processTwitchStreamCallback();
   }, [processTwitchStreamCallback]);
@@ -67,6 +81,7 @@ function App() {
   return (
     <div className="App">
       {isLive ? <TwitchIframe /> : <OfflineComponent />}
+      <ControlDeck />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 .App {
   min-height: 100vh;
   display: grid;
+  gap: 16px;
 }
 
 .iframe-wrapper {
@@ -34,4 +35,32 @@
   align-items: center;
   color: rgb(255, 255, 255);
   font-size: 24px;
+}
+
+.controldeck-wrapper {
+  display: grid;
+  background-color: rgb(44, 61, 87);
+}
+
+.controldeck-wrapper > button {
+  cursor: pointer;
+  background-color: rgb(118, 137, 166);
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.controldeck-wrapper > button:hover {
+  opacity: 0.9;
+}
+
+@media (min-width: 601px) {
+  .App {
+    grid-template-columns: 1fr 200px;
+  }
+}
+@media (max-width: 600px) {
+  .App {
+    grid-template-rows: 1fr 1fr;
+  }
 }
