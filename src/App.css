@@ -1,7 +1,6 @@
 .App {
   min-height: 100vh;
   display: grid;
-  background-color: rgb(19, 19, 21);
 }
 
 .iframe-wrapper {
